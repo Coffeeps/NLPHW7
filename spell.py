@@ -44,3 +44,21 @@ def edits2(word):
 print('speling -->', correction('speling'))
 # speling spelling
     
+# st.write(correction('speling')) #召喚出上面的＝＝＝＝＝＝prints
+st.title("Spellchecker Demo")
+
+
+fuck = st.selectbox('Choose a word or...',['apple','balloon','lamon','snow','speling','hapy','language'], help='You really need instructions for this?')
+if fuck == 'snow':
+    st.snow()
+if fuck == 'balloon':
+    st.balloons()
+fuck = st.text_input('Type your own!!', value=fuck, help='Type a word, any word.')
+if fuck == correction(fuck):
+    st.success("This is a success message!" + correction(fuck), icon="✅")
+if fuck != correction(fuck): #check the spell !=是否定
+    st.error("Correction:  " + correction(fuck), icon="🚨")
+
+check = st.sidebar.checkbox('Show original word')
+if check :
+    st.write("Original word:"+ fuck )
