@@ -1,3 +1,4 @@
+import streamlit as st
 import re
 from collections import Counter
 from pprint import pprint
@@ -43,7 +44,7 @@ def edits2(word):
  
 print('speling -->', correction('speling'))
 # speling spelling
-    
+
 # st.write(correction('speling')) #召喚出上面的＝＝＝＝＝＝prints
 st.title("Spellchecker Demo")
 
